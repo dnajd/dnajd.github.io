@@ -27,6 +27,10 @@ html {
     font-size:3.5em;
     color:$white;
     padding-bottom:.3em;
+
+    @include media($medium-screen) {
+      font-size:5em;
+    }
   }
 }
 
@@ -39,20 +43,32 @@ html {
     @include outer-container;
 
     aside {
-      width:110px;
+      width:90px;
       float:left;
       i {
           display:block;
-          margin-bottom:.4em;
+          margin-bottom:.3em;
+      }
+
+      @include media($medium-screen) {
+        width:110px;
+        i {
+          margin-bottom:.6em;
+        }
       }
 
     }
     article {
-      width:250px;
+      width:220px;
       float:left;
-      font-size:1.5em;
+      font-size:1.4em;
       padding-top:8px;
       color: darken($white, 20%);
+
+      @include media($medium-screen) {
+        width:300px;
+        font-size:1.8em;
+      }
     }
   }
 }
